@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Menu</title>
+</head>
+<body>
+<h1 id="title">Coffee Shop Menu</h1>
+
+<ul id="list">
+    <li>Coffee</li>
+    <li>Capuchino</li>
+    <li>Milk Tea</li>
+    <li id="item">Tropical Fruit Tea</li> 
+    <li>Peach Tea</li>
+
+</ul>
+
+<br>
+    <button id="btn-update">Update Menu</button>
+
+<script>
+    let btnUpdate = document.getElementById("btn-update");
+    let titleElem = document.getElementById("title");
+    let itemElem = document.getElementById("item");
+
+    let listElem = document.getElementById("list");
+// create new li tag
+    let newItemElem = document.createElement("li");
+// add text for new li tag
+    newItemElem.innerHTML = "Fruit Yogurt";
+
+
+    // add action for after clicking
+    btnUpdate.addEventListener('click', () => {
+        // show alert after clicking
+        alert("Button update is clicked");
+        console.log("Button is clicked");
+// change title color
+        titleElem.style.color = "red";
+        // remove old one
+        itemElem.remove();
+        // add new li item
+        listElem.appendChild(newItemElem);
+    });
+</script>
+</body>
+</html>
